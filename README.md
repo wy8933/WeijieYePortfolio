@@ -20,8 +20,11 @@ Search for a Student: The system provides a search functionality that helps admi
 
 #### Features
 Secure Login System: Ensures only authorized individuals have access to the student records.
+
 CRUD Operations: Facilitates adding, modifying, removing, and searching for student data.
+
 Data Visualization: Displays the list of students in a tabular format.
+
 Bulk Data Simulation: Allows administrators to simulate and create records for 1000 students.
 
 #### Built With
