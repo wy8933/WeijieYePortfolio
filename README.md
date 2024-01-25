@@ -23,6 +23,7 @@ Bulk Data Simulation: Allows administrators to simulate and create records for 1
 
 #### Built With
 Qt: A free and open-source widget toolkit for creating graphical user interfaces.
+
 SQLite: A C-language library that implements a small and fast SQL database engine.
 
 ##  Sword Rush:
