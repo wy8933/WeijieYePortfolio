@@ -11,8 +11,11 @@ https://github.com/wy8933/Portfolio/assets/112401719/1c7361e1-c1a6-41a5-bdf7-214
 
 #### Student Record Management:
 Add a Student: Administrators can add new student records by inputting information such as name, age, grade, student ID, phone number, and major.
+
 Remove a Student: Administrators can remove student records from the system.
+
 Modify a Student: Administrators can update the information of existing student records.
+
 Search for a Student: The system provides a search functionality that helps administrators quickly find student records based on student names.
 
 #### Features
