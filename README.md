@@ -1,5 +1,12 @@
 This is the portfolio for Weijie Ye.
 
+##Top down RPG
+### Description
+A top-down RPG game made with Unity. The players could fight with different enemies; each character had its animation with state machines to handle them.
+#### Video:
+https://github.com/wy8933/WeijieYePortfolio/assets/112401719/af46fa36-6730-4a12-ac06-2326b48cb2d3
+
+
 ## Student Management System
 ### Description
 The Student Management System is a desktop application developed using Qt and SQLite. It is designed to manage and organize student records efficiently. The application provides functionalities for administrators to perform CRUD operations (Create, Read, Update, Delete) on student data, ensuring seamless management.
