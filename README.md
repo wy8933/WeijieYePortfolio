@@ -2,7 +2,7 @@ This is the portfolio for Weijie Ye.
 
 ##Top down RPG
 ### Description
-A top-down RPG game made with Unity. The players could fight with different enemies; each character had its animation with state machines to handle them.
+A top-down RPG game made with Unity. The players could fight with different enemies; each character had its own animation with state machines to handle them.
 #### Video:
 https://github.com/wy8933/WeijieYePortfolio/assets/112401719/af46fa36-6730-4a12-ac06-2326b48cb2d3
 
