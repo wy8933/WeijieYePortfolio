@@ -6,7 +6,7 @@ In "Redemption Among Ruins," survival in the post-apocalyptic city of Eldhaven i
 
 https://github.com/wy8933/WeijieYePortfolio/assets/112401719/7d640f96-b1be-461d-9d46-1c343d0e0bbb
 
-
+## [Game Design Coc](https://share.nuclino.com/p/Mechanics-W1t-JRwKvVEq4GkEjq6luz): https://share.nuclino.com/p/Mechanics-W1t-JRwKvVEq4GkEjq6luz
 ## Top down RPG
 ### Description
 A top-down RPG game made with Unity. The players could fight with different enemies; each character had its own animation with state machines to handle them.
