@@ -2,6 +2,12 @@
 <html lang="en">
 
 <head>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Bundle JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -322,48 +328,153 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-unity">
           <center><h4>No Right Only Repairs</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/no-rights-only-repairs.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://es-jacque.itch.io/no-rights-only-repairs" target="_blank" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
+          <div id="no-right-carousel" class="carousel slide portfolio-wrap" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/project/no-rights-only-repairs.png" class="img-fluid" alt="Slide 1">
               </div>
             </div>
+            <a class="carousel-control-prev" href="#no-right-carousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#no-right-carousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6 portfolio-item filter-unity">
-          <center><h4>Aesop's Bell</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Aesops-Bell.png" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://weijieye.itch.io/aesops-bell" target="_blank" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
-              </div>
+        
+          <div class="portfolio-info">
+            <p class="project-description">
+              No Right, Only Repair is a game made during the GMTK Game Jam 2024. I collaborated with a team of five to develop a game MVP under four days, following agile methodology and utilizing Trello for task management.
+            </p>
+            <p class="project-description">
+              My primary contributions involved designing and implementing the user interface (UI) and scene management, which included creating the GUI, integrating player perks, building power upgrade interfaces, and developing a shop page using Unity's UI system and Scriptable Objects.
+            </p>
+            <p class="project-description">
+              I also managed game events such as enemy waves and dynamic rule changes by using C# event handlers and delegates, ensuring smooth gameplay and responsive mechanics throughout the game.
+            </p>
+          </div>
+            <div class="project-buttons" style="margin-top: 10px; text-align: center;">
+              <a 
+                href="https://github.com/joshmorgan89/GMTKJam" 
+                class="cta-btn cta-btn--projects" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                View on GitHub
+              </a>
+              <a 
+                href="https://es-jacque.itch.io/no-rights-only-repairs" 
+                class="cta-btn cta-btn--resume" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style="margin-left: 10px;">
+                View on Itch
+              </a>
             </div>
           </div>
-        </div>
+        
+        
+          <div class="col-lg-4 col-md-6 portfolio-item filter-other">
+            <center><h4>Neon Shadow</h4></center>
+            <div id="neon-shadow-carousel" class="carousel slide portfolio-wrap" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/img/project/neon-shadow.png" class="img-fluid" alt="Slide 1">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#neon-shadow-carousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#neon-shadow-carousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+            </div>
+            
+            <div class="portfolio-info">
+              <p class="project-description">
+                Neon Shadow is a fast-paced, futuristic action game set in a cyberpunk world. Players take on the role of a rogue AI combating enemies in vibrant, neon-lit environments.
+              </p>
+              <p class="project-description">
+                My responsibilities included implementing enemy AI and pathfinding, creating challenging combat mechanics, and developing interactive elements like traps and environmental hazards using Unity.
+              </p>
+              <p class="project-description">
+                I also optimized performance for real-time combat scenarios and collaborated with the team to ensure the gameplay experience aligned with the game's sleek, cyberpunk aesthetic.
+              </p>
+            </div>
+            
+            <div class="project-buttons" style="margin-top: 10px; text-align: center;">
+              <a 
+                href="https://github.com/Elumenix/Neon-Shadows" 
+                class="cta-btn cta-btn--projects" 
+                target="_blank" 
+                rel="noopener noreferrer">
+                View on GitHub
+              </a>
+              <a 
+                href="" 
+                class="cta-btn cta-btn--resume" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style="margin-left: 10px;">
+                Itch currently unavailable 
+              </a>
+            </div>
+          </div>
+          
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-unreal">
           <center><h4>Secrets of the Swan</h4></center>
-          <div class="portfolio-wrap">
-            <img src="assets/img/project/Swan.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              
-              <div class="portfolio-links">
-                <a href="https://bifflestein.itch.io/secrets-of-the-swan" target="_blank" title="Project Details">
-                  <i class="bx bx-info-circle"></i>
-                </a>
+          <div id="swan-carousel" class="carousel slide portfolio-wrap" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="assets/img/project/Swan.jpg" class="img-fluid" alt="Slide 1">
               </div>
             </div>
+            <a class="carousel-control-prev" href="#swan-carousel" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#swan-carousel" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+          </div>
+          
+          <div class="portfolio-info">
+            <p class="project-description">
+              Secrets of the Swan is a narrative-driven mystery game created during a collaborative game jam. Players explore a visually stunning environment while unraveling secrets and solving puzzles to progress through the story.
+            </p>
+            <p class="project-description">
+              I contributed by implementing key gameplay mechanics using Unreal Blueprints, crafting dynamic environmental interactions, and ensuring that game performance remained optimized for an immersive player experience.
+            </p>
+            <p class="project-description">
+              Additionally, I worked closely with the team to integrate storytelling elements seamlessly into the gameplay, aligning the narrative and mechanics for a cohesive experience.
+            </p>
+          </div>
+          
+          <div class="project-buttons" style="margin-top: 10px; text-align: center;">
+            <a 
+              href="https://github.com/your-github-repo-link" 
+              class="cta-btn cta-btn--projects" 
+              target="_blank" 
+              rel="noopener noreferrer">
+              View on GitHub
+            </a>
+            <a 
+              href="https://bifflestein.itch.io/secrets-of-the-swan" 
+              class="cta-btn cta-btn--resume" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              style="margin-left: 10px;">
+              View on Itch
+            </a>
           </div>
         </div>
+        
+        
 
         <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <br>
