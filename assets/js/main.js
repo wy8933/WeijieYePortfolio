@@ -4,6 +4,28 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+window.addEventListener('DOMContentLoaded', () => {
+  const portfolioIsotope = new Isotope('.portfolio .row.g-4', {
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows'
+  });
+
+  const filterButtons = document.querySelectorAll('#portfolio-flters .nav-link');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      filterButtons.forEach(el => el.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterValue = btn.getAttribute('data-filter');
+      portfolioIsotope.arrange({ filter: filterValue });
+    });
+  });
+});
+
+
 !(function($) {
   "use strict";
 
