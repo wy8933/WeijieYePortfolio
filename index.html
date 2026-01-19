@@ -7,6 +7,7 @@
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
+    
     /* Global Styles */
     body {
       font-family: 'Open Sans', sans-serif;
@@ -122,6 +123,41 @@
       padding: 1rem 0;
       text-align: center;
     }
+
+    /* ============================
+       FIX: Experience text is gray
+       ============================ */
+    #experience,
+    #experience .icon-box,
+    #experience .icon-box p,
+    #experience .icon-box li,
+    #experience .icon-box ul,
+    #experience .icon-box em,
+    #experience .icon-box h4,
+    #experience .icon-box h5,
+    #experience .icon-box h6,
+    #experience .icon-box span {
+      color: #fff !important;
+    }
+
+    /* =========================
+       FIX: About text is gray
+       ========================= */
+    #about,
+    #about .content,
+    #about .content p,
+    #about .content li,
+    #about .content ul,
+    #about .content em,
+    #about .content strong,
+    #about .section-title h2 {
+      color: #fff !important;
+    }
+
+    /* Project card should feel clickable */
+    .project-card {
+      cursor: pointer;
+    }
   </style>
 
   <!-- Google Tag Manager -->
@@ -169,8 +205,6 @@
     gtag('config', 'UA-169007209-3');
   </script>
 
-
-
   <!-- =======================================================
   * Template Name: Personal - v2.1.0
   * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
@@ -210,14 +244,15 @@
             <li><a href="#contacts"> <span>Contact</span></a></li>
           </ul>
         </nav>
-      
+
         <!-- Social Links aligned with nav -->
         <div class="social-links mt-2 text-start">
-          <a href="https://www.linkedin.com/in/weijieyegdd" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/weijieyegdd" target="_blank" class="linkedin"><i
+              class="bx bxl-linkedin"></i></a>
           <a href="https://www.github.com/wy8933" target="_blank" class="github"><i class="bx bxl-github"></i></a>
           <a href="mailto:weijieye167@gmail.com" target="_blank" class="google"><i class="bx bxl-google"></i></a>
         </div>
-      
+
       </div>
 
     </div>
@@ -338,6 +373,12 @@
             style="background-color: #FFFFFF; padding: 10px; border-radius: 4px;">
           <p style="text-align:left; color:#fff; padding: 5px 10px;"><em>MS in Game Design and Development</em></p>
           <h5 style="text-align:left; padding: 0 10px;">September 2025</h5>
+          <h6 style="text-align:left; color:#fff; padding: 0 10px;">Relevant Coursework:</h6>
+          <ul class="row list-unstyled" style="padding: 0 10px; color:#fff;">
+            <li class="col-md-4">- Game Development Process</li>
+            <li class="col-md-4">- Game Design</li>
+            <li class="col-md-4">- Colloquium in Game Design and Development</li>
+          </ul>
         </div>
 
         <!-- BS in Game Design and Development -->
@@ -360,6 +401,8 @@
             <li class="col-md-4">- AI in Game Environment</li>
             <li class="col-md-4">- Level Design</li>
             <li class="col-md-4">- Advanced Gameplay Programming</li>
+            <li class="col-md-4">- Maps Mapping Geospatial Technology</li>
+            <li class="col-md-4">- Interactive Narrative</li>
           </ul>
         </div>
       </div>
@@ -414,36 +457,116 @@
   <!-- End Education Section -->
 
 
-
   <!-- Start Experience Section -->
-
   <section id="experience" class="services">
     <div class="container">
       <div class="section-title">
         <h2>Experience</h2>
       </div>
+
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;"><a href="https://www.changelingvr.com/" style="color:#12d640">Changeling
-                VR</a><br> </h4>
-            <h5 style="text-align:left;"><a href="https://www.rit.edu/computing/school-interactive-games-and-media"
-                style="color:#12d640">RIT - School of Interactive Games and Media</a></h5>
-            <h5 style="text-align:left;">May 2024 – Aug 2024</h5>
-            <p style="text-align:left;color:#fff"><em>Game Developer</em></p>
-            <ul style="text-align:left;">
-              <li>Created detailed and engaging game levels that enhanced player experience and contributed to the
-                overall narrative and gameplay with the blueprint.</li>
-              <li>Collaborated with teams using Perforce and ClickUp under Agile methodology, ensuring level integration
-                within the overarching game design.</li>
-              <li>Authored documentation to help future developers understand and maintain the existing codebase.</li>
-            </ul>
+
+          <!-- Experience Item: Game Developer Co-op (Unity 6, C#) -->
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100"
+            style="color:#fff !important;">
+
+            <h4 style="text-align:left; font-size: 1.5rem; margin-bottom: 0.5rem;">
+              Game Developer Co-op <span style="font-size: 1.05rem; font-weight: 600;">(Unity 6, C#)</span>
+            </h4>
+
+            <h5 style="text-align:left; font-size: 1.2rem; margin-bottom: 0.3rem;">
+              <a href="https://www.rit.edu/computing/school-interactive-games-and-media" style="color:#12d640"
+                target="_blank">
+                RIT – School of Interactive Games and Media
+              </a>
+            </h5>
+
+            <h5 style="text-align:left; font-size: 1.1rem; margin-bottom: 0.75rem;">
+              May 2025 – Aug 2025
+            </h5>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              In this co-op role, I developed designer-facing tooling and runtime systems in Unity 6 using C#, with a
+              focus
+              on enabling data-driven narrative gameplay. My work centered on improving iteration speed for designers
+              while
+              maintaining a maintainable codebase and clean separation between editor tooling and runtime behavior.
+            </p>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              I built a node-based Dialogue Editor using <strong>EditorWindow</strong> and <strong>IMGUI</strong> that
+              allows
+              designers to create branching dialogue by connecting nodes visually. Dialogue content is stored in
+              <strong>ScriptableObjects</strong>, keeping the system data-driven and allowing runtime dialogue playback to
+              pull directly from authored data without hardcoding conversation logic.
+            </p>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8;">
+              I also implemented a data-driven event system powered by a <strong>variable-condition framework</strong>.
+              This system used validators to gate player choices and trigger gameplay events, which in turn updated world
+              state and supported narrative progression. The approach allowed designers to author conditions and outcomes
+              through data rather than code, making it easier to scale content and maintain consistent behavior.
+            </p>
+
           </div>
+
+          <!-- Experience Item: Changeling VR -->
+          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="150"
+            style="color:#fff !important;">
+
+            <h4 style="text-align:left; font-size: 1.5rem; margin-bottom: 0.5rem;">
+              <a href="https://www.changelingvr.com/" style="color:#12d640" target="_blank">
+                Changeling VR
+              </a>
+            </h4>
+
+            <h5 style="text-align:left; font-size: 1.2rem; margin-bottom: 0.3rem;">
+              <a href="https://www.rit.edu/computing/school-interactive-games-and-media" style="color:#12d640"
+                target="_blank">
+                RIT – School of Interactive Games and Media
+              </a>
+            </h5>
+
+            <h5 style="text-align:left; font-size: 1.1rem; margin-bottom: 0.5rem;">
+              May 2024 – Aug 2024
+            </h5>
+
+            <p style="text-align:left; font-size: 1.1rem; margin-bottom: 1.5rem;">
+              <em>Game Developer</em>
+            </p>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              I worked as a Game Developer on the Changeling VR project, focusing primarily on level development and
+              gameplay integration within Unreal Engine. My responsibilities centered on translating design intent into
+              playable spaces that supported both narrative delivery and player interaction.
+            </p>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              Using Unreal Engine Blueprints, I built and iterated on game levels, implemented interactive elements, and
+              refined pacing and flow to improve player experience. I regularly adjusted layouts and logic based on team
+              feedback to ensure that gameplay moments aligned with the overall vision of the project.
+            </p>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+              I collaborated closely with designers, artists, and other developers under an Agile workflow, using
+              Perforce for version control and ClickUp for task management. This required careful coordination to ensure
+              that my work integrated cleanly into the shared codebase and remained compatible with ongoing development.
+            </p>
+
+            <p style="text-align:left; font-size: 1.05rem; line-height: 1.8;">
+              In addition to development work, I authored internal documentation aimed at helping future developers
+              understand the structure of the project, how levels were set up, and how existing systems should be
+              extended or maintained. This documentation supported smoother onboarding and long-term maintainability of
+              the project.
+            </p>
+
+          </div>
+
         </div>
       </div>
     </div>
   </section>
-
   <!-- End Experience Section -->
 
 
@@ -467,56 +590,55 @@
       </div>
 
       <div class="row g-4">
-        <!-- Project Card: No Right Only Repairs -->
+
+        
+        <!-- Project Card: Basement I -->
         <div class="col-md-6 portfolio-item filter-unity">
-          <div class="card h-100 shadow-sm border-0">
-            <div id="carouselNoRight" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner rounded-top">
-                <div class="carousel-item active">
-                  <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/GMTK2024/2.webp" class="img-fluid rounded" alt="Slide 2">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/GMTK2024/3.webp" class="img-fluid rounded" alt="Slide 3">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/GMTK2024/4.webp" class="img-fluid rounded" alt="Slide 4">
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoRight"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselNoRight"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+          <div class="card h-100 shadow-sm border-0 project-card"
+            role="button" tabindex="0"
+            data-target="#project-basement1"
+            aria-controls="project-basement1"
+            aria-label="Open Basement I details">
+
+            <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+              <img src="assets/img/project/Basement I/Poster.png" class="img-fluid" alt="Basement I cover">
             </div>
+
             <div class="card-body">
-              <h5 class="card-title">No Right Only Repairs</h5>
-              <p class="card-text small">
-                No Right, Only Repair is a game made during the GMTK Game Jam 2024. I collaborated with a team of five
-                to
-                develop a game MVP under four days, following agile methodology and utilizing Trello for task
-                management.<br><br>
-                My primary contributions involved designing and implementing the user interface (UI) and scene
-                management,
-                which included creating the GUI, integrating player perks, building power upgrade interfaces, and
-                developing a shop page using Unity's UI system and Scriptable Objects.<br><br>
-                I also managed game events such as enemy waves and dynamic rule changes by using C# event handlers and
-                delegates, ensuring smooth gameplay and responsive mechanics throughout the game.
+              <h5 class="card-title">Basement I</h5>
+              <p class="card-text small mb-2">
+                Unity 6 · Sep 2025 – Dec 2025 · Rule-based gameplay with per-level rule changes.
               </p>
-              <div class="d-flex justify-content-between">
-                <a href="https://github.com/joshmorgan89/GMTKJam" class="btn btn-outline-primary btn-sm">GitHub</a>
-                <a href="https://es-jacque.itch.io/no-rights-only-repairs"
-                  class="btn btn-outline-secondary btn-sm">Itch.io</a>
+
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">Itch.io</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card: Cell Blockade -->
+        <div class="col-md-6 portfolio-item filter-unity">
+          <div class="card h-100 shadow-sm border-0 project-card"
+            role="button" tabindex="0"
+            data-target="#project-cell-blockade"
+            aria-controls="project-cell-blockade"
+            aria-label="Open Cell Blockade details">
+
+            <div class="ratio ratio-16x9 rounded-top overflow-hidden">
+              <img src="assets/img/project/CellBlockade/Cover.jpeg" class="img-fluid" alt="Cell Blockade cover">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Cell Blockade</h5>
+              <p class="card-text small mb-2">
+                Unity 6 · Jan 2025 – May 2025 · Buff editor tool + modular gameplay architecture.
+              </p>
+
+              <div class="d-flex justify-content-between mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">Itch.io</a>
               </div>
             </div>
           </div>
@@ -524,22 +646,30 @@
 
         <!-- Project Card: Neon Shadow -->
         <div class="col-md-6 portfolio-item filter-other">
-          <div class="card h-100 shadow-sm border-0">
+          <div class="card h-100 shadow-sm border-0 project-card"
+            role="button" tabindex="0"
+            data-target="#project-neon-shadow"
+            aria-controls="project-neon-shadow"
+            aria-label="Open Neon Shadow details">
+
             <div id="carouselNeon" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner rounded-top">
                 <div class="carousel-item active">
                   <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/neon-shadow/neon-shadow.png" class="img-fluid rounded" alt="Slide 1">
+                    <img src="assets/img/project/neon-shadow/neon-shadow.png" class="img-fluid rounded"
+                      alt="Neon Shadow screenshot 1">
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/neon-shadow/2.webp" class="img-fluid rounded" alt="Slide 2">
+                    <img src="assets/img/project/neon-shadow/2.webp" class="img-fluid rounded"
+                      alt="Neon Shadow screenshot 2">
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/neon-shadow/3.webp" class="img-fluid rounded" alt="Slide 3">
+                    <img src="assets/img/project/neon-shadow/3.webp" class="img-fluid rounded"
+                      alt="Neon Shadow screenshot 3">
                   </div>
                 </div>
               </div>
@@ -552,18 +682,18 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
+
             <div class="card-body">
               <h5 class="card-title">Neon Shadow</h5>
-              <p class="card-text small">
-                Neon Shadows is an isometric view hack n slash game where the player fights their way through the level,
-                players will have melee and ranged attacks that they can use to kill the hordes of enemies that wish to
-                halt their progress through the city.<br><br>
-                My primary contributions included implementing enemy AI and pathfinding for the enemies and developing
-                interactive elements like VFX and environmental hazards using Godot.
+              <p class="card-text small mb-2">
+                Godot · Isometric hack-n-slash · Enemy AI/pathfinding + VFX/environment hazards.
               </p>
-              <div class="d-flex justify-content-between">
-                <a href="https://github.com/Elumenix/Neon-Shadows" class="btn btn-outline-primary btn-sm">GitHub</a>
-                <a href="https://elumenix.itch.io/neon-shadows" class="btn btn-outline-secondary btn-sm">Itch.io</a>
+
+              <div class="d-flex justify-content-between mt-3">
+                <a href="https://github.com/Elumenix/Neon-Shadows" class="btn btn-outline-primary btn-sm" target="_blank"
+                  rel="noopener">GitHub</a>
+                <a href="https://elumenix.itch.io/neon-shadows" class="btn btn-outline-secondary btn-sm" target="_blank"
+                  rel="noopener">Itch.io</a>
               </div>
             </div>
           </div>
@@ -571,22 +701,30 @@
 
         <!-- Project Card: Secrets of the Swan -->
         <div class="col-md-6 portfolio-item filter-unreal">
-          <div class="card h-100 shadow-sm border-0">
+          <div class="card h-100 shadow-sm border-0 project-card"
+            role="button" tabindex="0"
+            data-target="#project-swan"
+            aria-controls="project-swan"
+            aria-label="Open Secrets of the Swan details">
+
             <div id="carouselSwan" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner rounded-top">
                 <div class="carousel-item active">
                   <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/GameOFF2024/Swan.jpg" class="img-fluid rounded" alt="Slide 1">
+                    <img src="assets/img/project/GameOFF2024/Swan.jpg" class="img-fluid rounded"
+                      alt="Secrets of the Swan screenshot 1">
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/GameOFF2024/1.webp" class="img-fluid rounded" alt="Slide 2">
+                    <img src="assets/img/project/GameOFF2024/1.webp" class="img-fluid rounded"
+                      alt="Secrets of the Swan screenshot 2">
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="ratio ratio-16x9">
-                    <img src="assets/img/project/GameOFF2024/2.webp" class="img-fluid rounded" alt="Slide 3">
+                    <img src="assets/img/project/GameOFF2024/2.webp" class="img-fluid rounded"
+                      alt="Secrets of the Swan screenshot 3">
                   </div>
                 </div>
               </div>
@@ -599,97 +737,385 @@
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
+
             <div class="card-body">
               <h5 class="card-title">Secrets of the Swan</h5>
-              <p class="card-text small">
-                Secrets of the Swan is a narrative-driven mystery game created during the Game-off 2024 game jam with a
-                team of 10. In this game players try to go back to reality by unraveling secrets and solving puzzles to
-                progress through the story.<br><br>
-                I contributed by implementing key gameplay mechanics using C++, crafting dynamic environmental
-                interactions, and ensuring that game performance remained optimized for an immersive player
-                experience.<br><br>
-                Additionally, I worked closely with the team to integrate storytelling elements seamlessly into the
-                gameplay, aligning the narrative and mechanics for a cohesive experience.
+              <p class="card-text small mb-2">
+                Unreal · Game Off 2024 · C++ gameplay mechanics + interactive systems for a narrative mystery.
               </p>
-              <div class="d-flex justify-content-between">
-                <a href="https://github.com/wy8933/Game-Off-2024" class="btn btn-outline-primary btn-sm">GitHub</a>
-                <a href="https://bifflestein.itch.io/secrets-of-the-swan"
-                  class="btn btn-outline-secondary btn-sm">Itch.io</a>
+
+              <div class="d-flex justify-content-between mt-3">
+                <a href="https://github.com/wy8933/Game-Off-2024" class="btn btn-outline-primary btn-sm" target="_blank"
+                  rel="noopener">GitHub</a>
+                <a href="https://bifflestein.itch.io/secrets-of-the-swan" class="btn btn-outline-primary btn-sm"
+                  target="_blank" rel="noopener">Itch.io</a>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Project Card: No Right Only Repairs -->
+        <div class="col-md-6 portfolio-item filter-unity">
+          <div class="card h-100 shadow-sm border-0 project-card"
+            role="button" tabindex="0"
+            data-target="#project-no-right"
+            aria-controls="project-no-right"
+            aria-label="Open No Right Only Repairs details">
+
+            <div id="carouselNoRight" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded-top">
+                <div class="carousel-item active">
+                  <div class="ratio ratio-16x9">
+                    <img src="assets/img/project/GMTK2024/2.webp" class="img-fluid rounded"
+                      alt="No Right Only Repairs screenshot 1">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="ratio ratio-16x9">
+                    <img src="assets/img/project/GMTK2024/3.webp" class="img-fluid rounded"
+                      alt="No Right Only Repairs screenshot 2">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="ratio ratio-16x9">
+                    <img src="assets/img/project/GMTK2024/4.webp" class="img-fluid rounded"
+                      alt="No Right Only Repairs screenshot 3">
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselNoRight" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselNoRight" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">No Right Only Repairs</h5>
+              <p class="card-text small mb-2">
+                Unity · GMTK Game Jam 2024 · UI + scene management + event-driven waves/rules.
+              </p>
+
+              <div class="d-flex justify-content-between mt-3">
+                <a href="https://github.com/joshmorgan89/GMTKJam" class="btn btn-outline-primary btn-sm" target="_blank"
+                  rel="noopener">GitHub</a>
+                <a href="https://es-jacque.itch.io/no-rights-only-repairs" class="btn btn-outline-primary btn-sm"
+                  target="_blank" rel="noopener">Itch.io</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
-
   <!-- End Project Section -->
 
 
+  <!-- ========================= -->
+  <!-- Project Detail Sections   -->
+  <!-- (Same "new page" behavior -->
+  <!-- as other sections)        -->
+  <!-- ========================= -->
 
-  <!-- Start Skills Section -->
+<section id="project-basement1" class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Basement I</h2>
+    </div>
 
-  <section id="skills" class="services">
+    <div class="row">
+      <div class="col-lg-12 icon-box" style="color:#fff !important;">
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          <strong>Basement I</strong> is a Unity 6 (URP) first-person psychological horror prototype developed from
+          <strong>Sep 2025 to Dec 2025</strong>. I served as the project’s <strong>Producer / Project Manager</strong>
+          and <strong>Gameplay Programmer / Systems Architect</strong>, leading a <strong>five-person team</strong> over
+          <strong>14 weeks</strong>. I ran sprint planning and execution in Jira, authored detailed tickets with clear
+          acceptance criteria, and coordinated cross-discipline integration to keep the project shippable each milestone.
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          The game’s core experience is <strong>tension through uncertainty</strong>: each floor introduces “policies”
+          (rules)—some true, some misleading—and the player must complete mundane tasks while testing boundaries and
+          avoiding the <strong>Rulekeeper</strong>, a systemic enforcer that resets the level upon real rule violations.
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          To support fast iteration and modular gameplay, I designed and implemented the project’s backend architecture:
+          a <strong>custom Event System</strong> (Event Bus + ScriptableObject Event Channels) that allows systems to
+          communicate without direct references, improving integration speed and making debugging easier through a
+          centralized signal layer. The bus supports <strong>global</strong> and <strong>scoped</strong> events, optional
+          <strong>sticky</strong> replay for late subscribers, and listener <strong>priorities</strong> when strict order
+          is required.
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          I also built the project’s <strong>Rule / Policy Violation System</strong> as a data-driven pipeline
+          (<strong>Conditions</strong> → <strong>Violation Actions</strong> → <strong>Resolve Actions</strong>) authored
+          via ScriptableObjects. Rules react to a variable-driven state layer: when tracked values change, the system
+          triggers rule-broken or rule-resolved events to drive consequences (e.g., Rulekeeper behavior) and UI feedback.
+          Separating evaluation, actions, and querying made the system easier to configure, scale across floors, and
+          diagnose when issues occurred.
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          For team-wide QA and playtesting speed, I implemented an in-game <strong>Debug Console</strong> integrated with
+          the event system. Team members could execute text commands that publish events to specific command scopes,
+          enabling rapid testing of rule states, UI responses, and integration flows without writing one-off debug scripts.
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          During Milestone 4, I focused on <strong>player readability and feedback polish</strong> based on playtesting:
+          I refined lighting consistency from the player’s perspective (making the “stay in the light” rule more legible)
+          and implemented a <strong>policy/task completion popup</strong> so players clearly understand when actions
+          succeed and progression conditions are met.
+        </p>
+
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
+            Back to Projects
+          </a>
+
+          <a
+            href="https://github.com/wy8933/IGME-601-Project"
+            class="btn btn-outline-primary btn-sm"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+
+          <!-- Replace the href below with your itch.io project page when ready -->
+          <a
+            href="#"
+            class="btn btn-outline-primary btn-sm"
+            target="_blank"
+            rel="noopener"
+          >
+            Itch.io
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="project-cell-blockade" class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Cell Blockade</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 icon-box" style="color:#fff !important;">
+
+        <!-- Overview -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+          <strong>Unity 6 · WebGL · Jan 2025 – May 2025</strong><br>
+          <strong>Role:</strong> Gameplay Programmer, Tools Programmer, Project Manager · <strong>Team:</strong> 5 (2 Programmers, 2 Artists, 1 Designer)
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          Cell Blockade is a single-player, wave-based top-down action defense prototype developed in Unity 6. The player controls a sentient soap character defending an open wound from increasingly difficult waves of germs. The game focuses on fast combat during waves and build planning between waves through perks and upgrades.
+          I led a five-person student team as both programmer and project manager. I coordinated an Agile workflow using Trello, defined iteration priorities, reviewed code through GitHub pull requests, and kept the team aligned on milestones while working part-time during the semester.
+        </p>
+
+        <!-- Core Loop -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          The game is built around a repeating wave loop with two phases. During the combat phase, enemies spawn continuously and pressure the player through numbers and damage, so the player must move, aim, and manage positioning to survive. During the preparation phase, the player uses a perk shop to modify their build before the next wave.
+          The prototype implements the full loop end-to-end: wave spawning, enemy scaling, perk selection, and gameplay effects that persist into combat.
+        </p>
+
+        <!-- Perk + Reward System -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          Perks are selected through a shop system driven by a <strong>RewardManager</strong> and a <strong>ScriptableObject reward table</strong>. Each roll first selects a rarity tier (Common, Uncommon, Rare, Epic, Legendary) using inspector-configurable probabilities, then chooses a perk from that tier. The shop presents three perk options at a time and supports rerolls. Once purchased, a perk is applied immediately as a buff, so it changes real gameplay instead of acting as a simple stat toggle.
+        </p>
+
+        <!-- Buff Runtime + Modules -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          I implemented the perk effects using a shared <strong>buff runtime system</strong> for both players and enemies. Each entity stores active buffs as a <code>List&lt;BuffInstance&gt;</code> with stack count, remaining duration, and priority. Buffs support clear refresh rules (Add / Replace / Keep duration) and stack removal rules (Clear / Reduce). Buff behavior is triggered by gameplay events such as projectile hits and health events (OnHit, OnHurt, OnKill, OnDeath). Effects are built using reusable <strong>Buff Modules</strong> (ScriptableObjects) so new perks can be created by combining data and modules instead of writing new gameplay scripts.
+        </p>
+
+        <!-- Enemy AI Integration -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          For enemy AI integration, behavior was separated into components (movement, targeting, attacking, and status/buff response). Buffs can influence enemies through shared interfaces rather than hard dependencies, which made the system easier to extend and maintain as we added new perks and enemy behaviors.
+        </p>
+
+        <!-- Design Diagram -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+          <strong>System Design Diagram:</strong> I mapped the full buff lifecycle, update rules, and event callbacks in Lucidchart before implementation. This diagram documents how buff data, runtime state, update logic, and effects connect.
+        </p>
+        <div class="ratio ratio-16x9" style="margin-bottom: 1.25rem;">
+          <iframe
+            src="assets/pdf/UnityBuffSystemMindMap.PDF"
+            title="Cell Blockade Buff System Design (PDF)"
+            style="border:0;"
+          ></iframe>
+        </div>
+
+        <!-- Editor Screenshots -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+          <strong>Custom Tools:</strong> I built two UI Toolkit editor windows (Buff Editor and Buff Module Editor) so designers could create and tune perk content safely without touching code.
+        </p>
+
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-6" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/CellBlockade/BuffEditor.png" class="img-fluid" alt="Cell Blockade - Buff Editor">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Buff Editor: create/edit/delete BuffData assets, assign modules per callback, manual save, safe delete, and auto-rename.
+            </p>
+          </div>
+          <div class="col-lg-6" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/CellBlockade/BuffModuleEditor.png" class="img-fluid" alt="Cell Blockade - Buff Module Editor">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Buff Module Editor: author reusable module assets (e.g., Modify Stats, Damage, Spawn Entity) shared across multiple perks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Closing -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+          This project shows my ability to design and ship connected gameplay systems, build reliable runtime logic, and create editor tools that reduce iteration cost and prevent content mistakes. It also reflects how I lead small teams with clear workflows, reviews, and milestones.
+        </p>
+
+        <!-- Buttons -->
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
+            Back to Projects
+          </a>
+          <a href="https://github.com/wy8933/Cell-blockade" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <a href="https://weijieye.itch.io/cell-blockade" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">
+            Itch.io
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="project-neon-shadow" class="services">
     <div class="container">
       <div class="section-title">
-        <h2>Skills</h2>
+        <h2>Neon Shadow</h2>
       </div>
+
       <div class="row">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Languages</h4>
-            <p style="text-align:left;">
-              <img src="https://www.vectorlogo.zone/logos/python/python-horizontal.svg" alt="vectorlogo.zone"
-                height="50" width="150">
-              <img src="https://www.vectorlogo.zone/logos/java/java-horizontal.svg" alt="vectorlogo.zone" height="50"
-                width="120">
-              <img src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
-                alt="upload.wikimedia.org" height="60" width="90">
-              <img src="https://www.vectorlogo.zone/logos/mysql/mysql-horizontal.svg" alt="vectorlogo.zone" height="70"
-                width="130">
-              <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-horizontal.svg" alt="vectorlogo.zone"
-                height="50" width="190">
+        <div class="col-lg-12 icon-box" style="color:#fff !important;">
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Neon Shadows is an isometric hack-and-slash where players combine melee and ranged attacks to push through
+            hostile city encounters. My work focused on making enemy behavior readable and responsive while maintaining
+            stable navigation in tight combat spaces.
+          </p>
 
-            </p>
-          </div>
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            I implemented enemy AI and pathfinding in Godot, building movement logic that could pursue the player,
+            re-path when blocked, and maintain consistent combat spacing. This included behavior transitions such as
+            idle → chase → attack states, along with tuning for acceleration/turning so enemies felt threatening without
+            becoming unfair or jittery.
+          </p>
 
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100"
-            style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Developing Tool</h4>
-            <p style="text-align:left;">
-              <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-horizontal.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/getbootstrap/getbootstrap-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/opencv/opencv-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"
-                alt="upload.wikimedia.org" width="90" height="70">
-            </p>
-          </div>
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            In addition, I developed interactive elements such as VFX-driven hazards and environmental interactions to
+            improve encounter pacing and make combat spaces feel more dynamic and reactive to player actions.
+          </p>
 
-          <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="lefade-up" data-aos-delay="100"
-            style="background:#fff">
-            <h4 style="text-align:left;color:#09203a">Collabration Tools</h4>
-            <p style="text-align:left;">
-              <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/google_cloud/google_cloud-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/heroku/heroku-ar21.svg" alt="vectorlogo.zone">
-              <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-ar21.svg" alt="vectorlogo.zone">
-            </p>
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
+              Back to Projects
+            </a>
+            <a href="https://github.com/Elumenix/Neon-Shadows" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://elumenix.itch.io/neon-shadows" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">Itch.io</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- End Skills Section -->
+  <section id="project-swan" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Secrets of the Swan</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 icon-box" style="color:#fff !important;">
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            Secrets of the Swan is a narrative-driven mystery game built during Game Off 2024 with a team of 10. Players
+            progress by uncovering hidden story information and solving puzzles that unlock new areas and narrative beats.
+          </p>
+
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            I implemented core gameplay mechanics in Unreal using C++, focusing on interactive systems that supported
+            puzzle progression and environmental storytelling. I paid attention to stability and performance so that
+            interactions remained reliable, especially under rapid iteration typical of a game jam.
+          </p>
+
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            I collaborated closely with the team to ensure mechanics reinforced narrative delivery—aligning interaction
+            affordances, puzzle gating, and progression triggers so that gameplay and story remained cohesive.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
+              Back to Projects
+            </a>
+            <a href="https://github.com/wy8933/Game-Off-2024" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://bifflestein.itch.io/secrets-of-the-swan" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">Itch.io</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="project-no-right" class="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>No Right Only Repairs</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 icon-box" style="color:#fff !important;">
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            No Right, Only Repair is a game created during GMTK Game Jam 2024. I collaborated with a team of five to
+            produce a playable MVP within four days, using an Agile workflow and Trello to keep scope controlled and
+            iterate quickly on the core loop.
+          </p>
+
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            My primary contribution was the UI and scene flow. I implemented the game’s menu-to-game transitions, core
+            HUD elements, perk selection, power upgrade interfaces, and shop page using Unity’s UI system. To keep the
+            content scalable during the jam, I structured upgrade/perk data with ScriptableObjects so designers (and the
+            team) could change values and descriptions without rewriting logic.
+          </p>
+
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+            I also supported event-driven gameplay (enemy waves and dynamic rule changes) using C# events/delegates to
+            decouple systems. This helped us iterate rapidly while keeping responsibilities separated (UI, waves, rules,
+            and progression), reducing last-minute integration risk.
+          </p>
+
+          <div class="d-flex gap-2 flex-wrap">
+            <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
+              Back to Projects
+            </a>
+            <a href="https://github.com/joshmorgan89/GMTKJam" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://es-jacque.itch.io/no-rights-only-repairs" class="btn btn-outline-primary btn-sm" target="_blank" rel="noopener">Itch.io</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- Start Contact Section -->
-
   <section id="contacts" class="contact">
     <div class="container">
 
@@ -757,7 +1183,55 @@
   </script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
+  <!-- Project Card -> Section navigation (same behavior as clicking nav tabs) -->
+  <script>
+  (function () {
+    function shouldIgnoreClick(target) {
+      return !!(
+        target.closest('a') ||
+        target.closest('button') ||
+        target.closest('.carousel-control-prev') ||
+        target.closest('.carousel-control-next') ||
+        target.closest('.carousel-indicators')
+      );
+    }
+
+    function showSection(hash) {
+      if (!hash || hash.charAt(0) !== '#') return;
+      var $section = $(hash);
+      if (!$section.length) return;
+
+      $('#header').addClass('header-top');
+      $('section').removeClass('section-show');
+      $section.addClass('section-show');
+
+      window.location.hash = hash;
+    }
+
+    // Project card -> open project detail section
+    $(document).on('click', '.project-card', function (e) {
+      if (shouldIgnoreClick(e.target)) return;
+      var target = this.getAttribute('data-target');
+      if (target) showSection(target);
+    });
+
+    $(document).on('keydown', '.project-card', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      e.preventDefault();
+      var target = this.getAttribute('data-target');
+      if (target) showSection(target);
+    });
+
+    // Back to Projects (and any future section-switch link)
+    $(document).on('click', 'a.js-show-section', function (e) {
+      e.preventDefault();
+      var target = this.getAttribute('data-target') || this.getAttribute('href');
+      if (target) showSection(target);
+    });
+  })();
+</script>
+
 </body>
 
 </html>
