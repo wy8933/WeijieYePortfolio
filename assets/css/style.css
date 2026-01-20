@@ -726,9 +726,6 @@ section .container {
   background: #35e888;
 }
 
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: #12d640;
-}
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -748,9 +745,8 @@ section .container {
 
 .portfolio #portfolio-flters li {
   cursor: pointer;
-  display: inline-block;
-  padding: 8px 16px 10px 16px;
-  font-size: 14px;
+  display: block;
+  font-size: 18px;
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
