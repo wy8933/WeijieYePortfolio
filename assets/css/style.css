@@ -271,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header Top */
 #header.header-top {
-  height: 90px;
+  height: auto;
   position: fixed;
   left: 0;
   top: 0;
@@ -320,7 +320,7 @@ section {
 }
 
 section.section-show {
-  top: 70px;
+  top: 120px;
   bottom: auto;
   opacity: 1;
   padding-bottom: 0px;
@@ -341,7 +341,7 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
@@ -352,9 +352,18 @@ section .container {
   font-family: "Poppins", sans-serif;
 }
 
+.section-title h2::before {
+  content: "";
+  width: 240px;
+  height: 1px;
+  display: inline-block;
+  background: #dee2e6;
+  margin: 4px 10px;
+}
+
 .section-title h2::after {
   content: "";
-  width: 120px;
+  width: 240px;
   height: 1px;
   display: inline-block;
   background: #dee2e6;
