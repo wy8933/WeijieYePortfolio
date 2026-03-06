@@ -157,6 +157,28 @@
     .project-card {
       cursor: pointer;
     }
+
+    /* Click-to-zoom images in project detail sections */
+    section[id^="project-"] img.img-fluid {
+      cursor: zoom-in;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      transform-origin: center center;
+      position: relative;
+      z-index: 1;
+    }
+
+    section[id^="project-"] img.img-fluid.image-expanded {
+      cursor: zoom-out;
+      transform: scale(1.85);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      z-index: 20;
+    }
+
+    @media (max-width: 992px) {
+      section[id^="project-"] img.img-fluid.image-expanded {
+        transform: scale(1.35);
+      }
+    }
   </style>
 
   <!-- Google Tag Manager -->
@@ -477,7 +499,7 @@
             </p>
 
             <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
-              I collaborated closely with designers, artists, and other developers under an Agile workflow, using
+              I collaborated closely with designers, artists, and other developers under a Scrum workflow, using
               Perforce for version control and ClickUp for task management. This required careful coordination to ensure
               that my work integrated cleanly into the shared codebase and remained compatible with ongoing development.
             </p>
@@ -519,7 +541,60 @@
 
       <div class="row g-4">
 
-        
+      <!-- Project Card: Shardworld Forger -->
+      <div class="col-md-6 portfolio-item filter-unity">
+        <div class="card h-100 shadow-sm border-0 project-card"
+          role="button" tabindex="0"
+          data-target="#project-shardworld-forger"
+          aria-controls="project-shardworld-forger"
+          aria-label="Open Shardworld Forger details">
+
+          <div id="carouselShardworldForger" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner rounded-top">
+
+              <div class="carousel-item active">
+                <div class="ratio ratio-16x9">
+                  <img src="assets/img/project/ShardworldForger/SkillEditor.png" class="img-fluid rounded"
+                    alt="[Main skill editor window showing the designer-facing workflow for configuring skills.]">
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <img src="assets/img/project/ShardworldForger/BuffEditor.png" class="img-fluid rounded"
+                    alt="[Buff editor window used to create and tune reusable status effects and gameplay modifiers.]">
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="ratio ratio-16x9">
+                  <img src="assets/img/project/ShardworldForger/EnemyBehaviorTree.png" class="img-fluid rounded"
+                    alt="[Enemy AI behavior graph showing modular combat decision-making and state transitions.]">
+                </div>
+              </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselShardworldForger" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselShardworldForger" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Shardworld Forger</h5>
+            <p class="card-text small mb-2">
+              Unity 6 · Oct 2025 – Present · Custom editor tooling, modular combat systems, and behavior-driven enemy AI.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
         <!-- Project Card: Basement I -->
         <div class="col-md-6 portfolio-item filter-unity">
           <div class="card h-100 shadow-sm border-0 project-card"
@@ -749,6 +824,130 @@
   <!-- as other sections)        -->
   <!-- ========================= -->
 
+<section id="project-shardworld-forger" class="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Shardworld Forger</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 icon-box" style="color:#fff !important;">
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+          <strong>Unity 6 · Oct 2025 – Present</strong><br>
+          Role: Lead Programmer & Producer · Team: 10 · Workflow: Scrum + Trello
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          <strong>Shardworld Forger</strong> is a 3D top-down roguelite action RPG centered on modular combat systems,
+          scalable content pipelines, and procedural world-building. In this project, I serve as both the
+          <strong>Lead Programmer</strong> and <strong>Producer</strong>, responsible for gameplay system architecture,
+          designer-facing tooling, and technical workflow coordination across the team.
+        </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          A major part of my work has been building a <strong>data-driven combat pipeline</strong> that separates runtime logic,
+          configuration data, and editor tooling. This allows designers to create and iterate on skills, buffs, and special effects
+          through structured Unity editor workflows instead of relying on hardcoded implementations. The goal is to make combat content
+          easier to scale while keeping runtime systems maintainable and reusable.
+        </p>
+
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-6" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/ShardworldForger/SkillEditor.png" class="img-fluid"
+              alt="[Main skill editor window showing the designer-facing workflow for configuring skills.]">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Main skill editor window showing the designer-facing workflow for configuring skills.
+            </p>
+          </div>
+
+          <div class="col-lg-6" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/ShardworldForger/SkillEditor-Effect.png" class="img-fluid"
+              alt="[Detailed skill effect editing interface showing how individual effects are authored and configured.]">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Detailed skill effect editing interface showing how individual effects are authored and configured.
+            </p>
+          </div>
+        </div>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          To support this workflow, I created <strong>custom Unity Editor tools</strong> for skill and buff authoring.
+          These tools organize gameplay data into structured interfaces that are easier to validate, edit, and maintain.
+          Instead of manually editing scattered values or writing one-off scripts, designers can configure core combat behavior
+          through dedicated editor windows built specifically for the project’s systems.
+        </p>
+
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-6" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/ShardworldForger/BuffEditor.png" class="img-fluid"
+              alt="[Buff editor window used to create and tune reusable status effects and gameplay modifiers.]">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Buff editor window used to create and tune reusable status effects and gameplay modifiers.
+            </p>
+          </div>
+
+          <div class="col-lg-6" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/ShardworldForger/AbilityEditor-SpecialEffect.png" class="img-fluid"
+              alt="[Ability editor special effect configuration view where special level effects can override and replace the original ability effects, allowing designers to define alternate behaviors at higher levels through data.]">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Ability editor special effect configuration view where special level effects can override and replace the original ability effects, allowing designers to define alternate behaviors at higher levels through data.
+            </p>
+          </div>
+        </div>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          I also implemented enemy AI using <strong>Unity Behavior Graph</strong>, designing modular behavior logic for combat decision-making,
+          state transitions, and reactive behavior. This structure helps standardize enemy logic across archetypes while still allowing
+          specific behaviors to be tuned or extended per enemy type.
+        </p>
+
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-12" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/ShardworldForger/EnemyBehaviorTree.png" class="img-fluid"
+              alt="[Enemy AI behavior graph showing modular combat decision-making and state transitions.]">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Enemy AI behavior graph showing modular combat decision-making and state transitions.
+            </p>
+          </div>
+        </div>
+
+        <h5 style="text-align:left; margin-top: 1.5rem;">System Architecture</h5>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+          To keep gameplay systems scalable and maintainable, I designed the project around a modular architecture
+          where runtime systems communicate through events while reading configuration data from ScriptableObject assets.
+          The diagram below illustrates how core gameplay systems such as the <strong>Ability System</strong>,
+          <strong>Buff System</strong>, <strong>Inventory System</strong>, and <strong>Stat System</strong> interact
+          with shared infrastructure including the <strong>Event System</strong>, <strong>Variable Condition System</strong>,
+          and the <strong>Save System</strong>.
+        </p>
+
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-12">
+            <img src="assets/img/project/ShardworldForger/SystemArchitecture.png" class="img-fluid"
+              alt="Shardworld Forger system architecture diagram showing interactions between gameplay systems, infrastructure systems, and data assets.">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              System architecture diagram showing how gameplay systems communicate through events, read configuration data
+              from ScriptableObject assets, and integrate with shared infrastructure such as the event system and save system.
+            </p>
+          </div>
+        </div>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          Beyond implementation, I also contribute to production planning and team coordination. I break down technical work into structured tasks,
+          support cross-discipline communication, and help ensure that gameplay systems aligned with the needs of design and content creation.
+        </p>
+
+        <div class="d-flex gap-2 flex-wrap">
+          <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
+            Back to Projects
+          </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="project-basement1" class="services">
   <div class="container">
     <div class="section-title">
@@ -757,13 +956,26 @@
 
     <div class="row">
       <div class="col-lg-12 icon-box" style="color:#fff !important;">
-        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
-          <strong>Basement I</strong> is a Unity 6 (URP) first-person psychological horror prototype developed from
-          <strong>Sep 2025 to Dec 2025</strong>. I served as the project’s <strong>Producer / Project Manager</strong>
-          and <strong>Gameplay Programmer / Systems Architect</strong>, leading a <strong>five-person team</strong> over
-          <strong>14 weeks</strong>. I ran sprint planning and execution in Jira, authored detailed tickets with clear
-          acceptance criteria, and coordinated cross-discipline integration to keep the project shippable each milestone.
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+          <strong>Unity 6 (URP) · Sep 2025 – Dec 2025</strong><br>
+          Role: Producer / Project Manager, Gameplay Programmer / Systems Architect · Team: 5 · Workflow: Scrum + Jira
         </p>
+
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
+          <strong>Basement I</strong> is a first-person psychological horror prototype built over a 14-week production cycle.
+          I led sprint planning and execution in Jira, authored detailed tickets with clear acceptance criteria,
+          and coordinated cross-discipline integration to keep the project shippable at each milestone.
+        </p>
+
+        <h5 style="text-align:left; margin-top: 1.5rem;">Cutscene Trailer</h5>
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-12">
+            <video class="w-100" controls preload="metadata" playsinline>
+              <source src="assets/img/project/Basement I/Cutscene_Trailer.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
 
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
           The game’s core experience is <strong>tension through uncertainty</strong>: each floor introduces “policies”
@@ -839,38 +1051,58 @@
       <div class="col-lg-12 icon-box" style="color:#fff !important;">
 
         <!-- Overview -->
+        <h5 style="text-align:left; margin-top: 0;">Project Overview</h5>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
           <strong>Unity 6 · WebGL · Jan 2025 – May 2025</strong><br>
-          <strong>Role:</strong> Gameplay Programmer, Tools Programmer, Project Manager · <strong>Team:</strong> 5 (2 Programmers, 2 Artists, 1 Designer)
+          Role: Gameplay Programmer, Tools Programmer, Project Manager · Team: 5 · Workflow: Scrum + Trello
         </p>
 
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
           Cell Blockade is a single-player, wave-based top-down action defense prototype developed in Unity 6. The player controls a sentient soap character defending an open wound from increasingly difficult waves of germs. The game focuses on fast combat during waves and build planning between waves through perks and upgrades.
-          I led a five-person student team as both programmer and project manager. I coordinated an Agile workflow using Trello, defined iteration priorities, reviewed code through GitHub pull requests, and kept the team aligned on milestones while working part-time during the semester.
+          I led a five-person student team as both programmer and project manager. I coordinated a Scrum workflow using Trello, defined iteration priorities, reviewed code through GitHub pull requests, and kept the team aligned on milestones while working part-time during the semester.
         </p>
 
+        <div class="row" style="margin-bottom: 1.25rem;">
+          <div class="col-lg-12" style="margin-bottom: 0.75rem;">
+            <img src="assets/img/project/CellBlockade/Cover.jpeg" class="img-fluid" alt="Cell Blockade cover image">
+            <p style="text-align:left; font-size: 0.95rem; line-height: 1.6; margin-top: 0.5rem; margin-bottom: 0;">
+              Cell Blockade cover art.
+            </p>
+          </div>
+        </div>
+
         <!-- Core Loop -->
+        <h5 style="text-align:left; margin-top: 1.5rem;">Core Gameplay Loop</h5>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
           The game is built around a repeating wave loop with two phases. During the combat phase, enemies spawn continuously and pressure the player through numbers and damage, so the player must move, aim, and manage positioning to survive. During the preparation phase, the player uses a perk shop to modify their build before the next wave.
           The prototype implements the full loop end-to-end: wave spawning, enemy scaling, perk selection, and gameplay effects that persist into combat.
         </p>
 
-        <!-- Perk + Reward System -->
+        <!-- Systems -->
+        <h5 style="text-align:left; margin-top: 1.5rem;">Combat Systems Architecture</h5>
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+          <strong>Perk + Reward System:</strong>
+        </p>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
           Perks are selected through a shop system driven by a <strong>RewardManager</strong> and a <strong>ScriptableObject reward table</strong>. Each roll first selects a rarity tier (Common, Uncommon, Rare, Epic, Legendary) using inspector-configurable probabilities, then chooses a perk from that tier. The shop presents three perk options at a time and supports rerolls. Once purchased, a perk is applied immediately as a buff, so it changes real gameplay instead of acting as a simple stat toggle.
         </p>
 
-        <!-- Buff Runtime + Modules -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+          <strong>Buff Runtime + Modules:</strong>
+        </p>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
           I implemented the perk effects using a shared <strong>buff runtime system</strong> for both players and enemies. Each entity stores active buffs as a <code>List&lt;BuffInstance&gt;</code> with stack count, remaining duration, and priority. Buffs support clear refresh rules (Add / Replace / Keep duration) and stack removal rules (Clear / Reduce). Buff behavior is triggered by gameplay events such as projectile hits and health events (OnHit, OnHurt, OnKill, OnDeath). Effects are built using reusable <strong>Buff Modules</strong> (ScriptableObjects) so new perks can be created by combining data and modules instead of writing new gameplay scripts.
         </p>
 
-        <!-- Enemy AI Integration -->
+        <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
+          <strong>Enemy AI Integration:</strong>
+        </p>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
           For enemy AI integration, behavior was separated into components (movement, targeting, attacking, and status/buff response). Buffs can influence enemies through shared interfaces rather than hard dependencies, which made the system easier to extend and maintain as we added new perks and enemy behaviors.
         </p>
 
         <!-- Design Diagram -->
+        <h5 style="text-align:left; margin-top: 1.5rem;">System Design Diagram</h5>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
           <strong>System Design Diagram:</strong> I mapped the full buff lifecycle, update rules, and event callbacks in Lucidchart before implementation. This diagram documents how buff data, runtime state, update logic, and effects connect.
         </p>
@@ -883,6 +1115,7 @@
         </div>
 
         <!-- Editor Screenshots -->
+        <h5 style="text-align:left; margin-top: 1.5rem;">Designer Tooling</h5>
         <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 0.75rem;">
           <strong>Custom Tools:</strong> I built two UI Toolkit editor windows (Buff Editor and Buff Module Editor) so designers could create and tune perk content safely without touching code.
         </p>
@@ -934,6 +1167,11 @@
 
       <div class="row">
         <div class="col-lg-12 icon-box" style="color:#fff !important;">
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            <strong>Godot · 2024</strong><br>
+            Role: Gameplay Programmer (AI/Pathfinding) · Team: Elumenix Team · Workflow: Trello
+          </p>
+
           <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
             Neon Shadows is an isometric hack-and-slash where players combine melee and ranged attacks to push through
             hostile city encounters. My work focused on making enemy behavior readable and responsive while maintaining
@@ -951,6 +1189,18 @@
             In addition, I developed interactive elements such as VFX-driven hazards and environmental interactions to
             improve encounter pacing and make combat spaces feel more dynamic and reactive to player actions.
           </p>
+
+          <div class="row" style="margin-bottom: 1.25rem;">
+            <div class="col-lg-4 col-md-6" style="margin-bottom: 0.75rem;">
+              <img src="assets/img/project/neon-shadow/neon-shadow.png" class="img-fluid" alt="Neon Shadow screenshot 1">
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-bottom: 0.75rem;">
+              <img src="assets/img/project/neon-shadow/2.webp" class="img-fluid" alt="Neon Shadow screenshot 2">
+            </div>
+            <div class="col-lg-4 col-md-6" style="margin-bottom: 0.75rem;">
+              <img src="assets/img/project/neon-shadow/3.webp" class="img-fluid" alt="Neon Shadow screenshot 3">
+            </div>
+          </div>
 
           <div class="d-flex gap-2 flex-wrap">
             <a href="#portfolio" class="btn btn-outline-light btn-sm js-show-section" data-target="#portfolio">
@@ -972,6 +1222,11 @@
 
       <div class="row">
         <div class="col-lg-12 icon-box" style="color:#fff !important;">
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            <strong>Unreal Engine · Game Off 2024</strong><br>
+            Role: Gameplay Programmer · Team: 10
+          </p>
+
           <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
             Secrets of the Swan is a narrative-driven mystery game built during Game Off 2024 with a team of 10. Players
             progress by uncovering hidden story information and solving puzzles that unlock new areas and narrative beats.
@@ -1008,9 +1263,14 @@
 
       <div class="row">
         <div class="col-lg-12 icon-box" style="color:#fff !important;">
+          <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.25rem;">
+            <strong>Unity · GMTK Game Jam 2024</strong><br>
+            Role: UI Programmer & Systems Programmer · Team: 5
+          </p>
+
           <p style="text-align:left; font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">
             No Right, Only Repair is a game created during GMTK Game Jam 2024. I collaborated with a team of five to
-            produce a playable MVP within four days, using an Agile workflow and Trello to keep scope controlled and
+            produce a playable MVP within four days, using a Scrum workflow and Trello to keep scope controlled and
             iterate quickly on the core loop.
           </p>
 
@@ -1158,6 +1418,30 @@
   })();
 </script>
 
+  <script>
+    (function () {
+      var projectImages = document.querySelectorAll('section[id^="project-"] img.img-fluid');
+
+      projectImages.forEach(function (img) {
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('role', 'button');
+        img.setAttribute('aria-label', 'Toggle enlarged image');
+
+        img.addEventListener('click', function () {
+          img.classList.toggle('image-expanded');
+        });
+
+        img.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            img.classList.toggle('image-expanded');
+          }
+        });
+      });
+    })();
+  </script>
+
 </body>
 
 </html>
+
